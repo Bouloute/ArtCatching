@@ -27,14 +27,13 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import MainButton from './components/MainButton'
-
-
+import NavBar from './components/NavBar'
 
 const App: () => Node = () => {
   return (
     <View>
+      <NavBar/>
       <Text>hello im bipo</Text>
-      <MainButton/>
     </View>
   );
 };
