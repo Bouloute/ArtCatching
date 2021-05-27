@@ -20,7 +20,7 @@ export default class NavBar extends Component {
                 <NavigationBar
                     tintColor={'#919191'}
                     title={{
-                        title: 'Hello, world',
+                        title: 'Art Catching',
                     }}
                     rightButton={rightButtonConfig}
                     leftButton={leftButtonConfig}
