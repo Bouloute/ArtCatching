@@ -34,6 +34,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import MainButton from './components/MainButton'
 import NavBar from './components/NavBar'
 import HomeScreen from './screens/HomeScreen'
+import AnotherScreen from './screens/AnotherScreen'
 
 /*
 const App = StackNavigator({
@@ -59,6 +60,8 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Another" component={AnotherScreen} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
