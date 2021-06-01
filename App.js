@@ -19,6 +19,8 @@ import MainButton from './components/MainButton'
 import NavBar from './components/NavBar'
 import HomeScreen from './screens/HomeScreen'
 import AnotherScreen from './screens/AnotherScreen'
+import LoginScreen from './screens/LoginScreen'
+
 
 const Stack = createStackNavigator();
 
@@ -35,27 +37,10 @@ function App() {
         <Stack.Screen 
           name="Home" 
           component={HomeScreen}  
-          options={{
-            headerRight: () => (
-              <Text
-                onPress={() => alert('This is a WIP!')}
-                style={{ 
-                  fontSize: 20,
-                  color: 'white',
-                  marginRight: 20
-                }}
-              > Login
-              </Text>
-            ),
-          }} 
-        />
-        <Stack.Screen 
-          name="Another" 
-          component={AnotherScreen}
-          options={{
+          options={({ navigation }) => ({
           headerRight: () => (
             <Text
-              onPress={() => alert('This is a WIP!')}
+              onPress={() =>navigation.navigate('Login')}
               style={{ 
                 fontSize: 20,
                 color: 'white',
@@ -64,8 +49,30 @@ function App() {
             > Login
             </Text>
           ),
-          }} 
+          })}  
         />
+        <Stack.Screen 
+          name="Another" 
+          component={AnotherScreen}
+          options={({ navigation }) => ({
+          headerRight: () => (
+            <Text
+              onPress={() =>navigation.navigate('Login')}
+              style={{ 
+                fontSize: 20,
+                color: 'white',
+                marginRight: 20
+              }}
+            > Login
+            </Text>
+          ),
+          })} 
+        />
+        <Stack.Screen 
+          name="Login" 
+          component={LoginScreen}
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
