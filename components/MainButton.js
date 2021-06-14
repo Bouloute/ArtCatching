@@ -21,13 +21,14 @@ export default class MainButton extends Component {
         return (
             <View>
               <TouchableOpacity onPress={() => Alert.alert('image clicked')}>
-
                 <Image
-                    source={{uri: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg=='}}
-                    style={styles.tinyLogo}
-                    
+                  source={{uri: this.props.pic}}
+                  style={styles.tinyLogo} 
                 />
-                <Text style={{ justifyContent: 'center'}}> Hello its me Bipo </Text>
+                <Text 
+                  style={{ justifyContent: 'center'}}> 
+                  I am a Title
+                </Text>
               </TouchableOpacity>
             </View>
         )
