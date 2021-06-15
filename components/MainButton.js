@@ -20,14 +20,14 @@ export default class MainButton extends Component {
     render() {
         return (
             <View>
-              <TouchableOpacity onPress={() => Alert.alert('image clicked')}>
+              <TouchableOpacity onPress={() => Alert.alert(this.props.title)}>
                 <Image
-                  source={{uri: this.props.pic}}
+                  source={{uri: this.props.src}}
                   style={styles.tinyLogo} 
                 />
                 <Text 
                   style={{ justifyContent: 'center'}}> 
-                  I am a Title
+                  {this.props.title}
                 </Text>
               </TouchableOpacity>
             </View>
