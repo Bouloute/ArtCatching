@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { StyleSheet, Image, Text, View, TouchableOpacity, Alert } from 'react-native'
+import { StyleSheet, Image, Text, View, TouchableOpacity, Alert, Button } from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
@@ -19,18 +19,13 @@ const styles = StyleSheet.create({
 export default class MainButton extends Component {
     render() {
         return (
-            <View>
-              <TouchableOpacity onPress={() => Alert.alert(this.props.title)}>
-                <Image
-                  source={{uri: this.props.src}}
-                  style={styles.tinyLogo} 
-                />
-                <Text 
-                  style={{ justifyContent: 'center'}}> 
-                  {this.props.title}
-                </Text>
-              </TouchableOpacity>
-            </View>
+          <Button 
+            title={this.props.title + ''} 
+            onPress={this.props.onPress}
+            color='grey'
+          
+          >
+          </Button>
         )
     }
 }

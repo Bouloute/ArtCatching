@@ -9,19 +9,13 @@ export default function HomeScreen({ navigation })  {
     
     return (
         <View>
-            <Text> This is the home page! </Text>
-            <Button title="Another Page" onPress={() => {navigation.navigate('Another')}}></Button>
-            <View style={{flexDirection: "row", justifyContent: 'center',}}>
-                <MainButton 
-                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAAEXRFWHRTb2Z0d2FyZQBwbmdjcnVzaEB1SfMAAABQSURBVGje7dSxCQBACARB+2/ab8BEeQNhFi6WSYzYLYudDQYGBgYGBgYGBgYGBgYGBgZmcvDqYGBgmhivGQYGBgYGBgYGBgYGBgYGBgbmQw+P/eMrC5UTVAAAAABJRU5ErkJggg==" 
-                    title="Hello"
-                />
-                <MainButton />
-            </View>
-            <View style={{flexDirection: "row", justifyContent: 'center',}}>
-                <MainButton />
-                <MainButton />
-            </View>
+            <Text style={{ textAlign: 'center'}}>  Art Catching </Text>
+            <MainButton 
+                title="Enigmas"
+                onPress={() => {navigation.navigate('Another')}}
+            />
+            <MainButton title="Solved"/>
+            <MainButton title="About"/>
         </View>
     )
     
