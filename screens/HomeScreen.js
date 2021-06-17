@@ -12,7 +12,7 @@ export default function HomeScreen({ navigation })  {
             <Text style={{ textAlign: 'center'}}>  Art Catching </Text>
             <MainButton 
                 title="Enigmas"
-                onPress={() => {navigation.navigate('Another')}}
+                onPress={() => {navigation.navigate('Enigmas')}}
             />
             <MainButton title="Solved"/>
             <MainButton title="About"/>
