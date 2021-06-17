@@ -20,6 +20,7 @@ import NavBar from './components/NavBar'
 import HomeScreen from './screens/HomeScreen'
 import AnotherScreen from './screens/AnotherScreen'
 import LoginScreen from './screens/LoginScreen'
+import EnigmaScreen from './screens/EnigmaScreen'
 
 
 const Stack = createStackNavigator();
@@ -71,6 +72,18 @@ function App() {
         <Stack.Screen 
           name="Login" 
           component={LoginScreen}
+        />
+        <Stack.Screen 
+          name="Enigmas" 
+          component={EnigmaScreen}
+        />
+        <Stack.Screen 
+          name="Solved" 
+          component={EnigmaScreen}
+        />
+        <Stack.Screen 
+          name="About" 
+          component={AnotherScreen}
         />
 
       </Stack.Navigator>
