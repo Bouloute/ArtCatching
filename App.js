@@ -18,7 +18,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import MainButton from './components/MainButton'
 import NavBar from './components/NavBar'
 import HomeScreen from './screens/HomeScreen'
-import AnotherScreen from './screens/AnotherScreen'
+import AboutScreen from './screens/AboutScreen'
 import LoginScreen from './screens/LoginScreen'
 import EnigmasScreen from './screens/EnigmasScreen'
 
@@ -53,23 +53,6 @@ function App() {
           })}  
         />
         <Stack.Screen 
-          name="Another" 
-          component={AnotherScreen}
-          options={({ navigation }) => ({
-          headerRight: () => (
-            <Text
-              onPress={() =>navigation.navigate('Login')}
-              style={{ 
-                fontSize: 20,
-                color: 'white',
-                marginRight: 20
-              }}
-            > Login
-            </Text>
-          ),
-          })} 
-        />
-        <Stack.Screen 
           name="Login" 
           component={LoginScreen}
         />
@@ -83,7 +66,7 @@ function App() {
         />
         <Stack.Screen 
           name="About" 
-          component={AnotherScreen}
+          component={AboutScreen}
         />
 
       </Stack.Navigator>

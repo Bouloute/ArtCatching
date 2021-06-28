@@ -18,7 +18,9 @@ export default function HomeScreen({ navigation })  {
                 title="Solved"
                 onPress={() => {navigation.navigate('Enigmas')}}
             />
-            <MainButton title="About"/>
+            <MainButton 
+                title="About"
+                onPress={() => {navigation.navigate('About')}}/>
         </View>
     )
     
